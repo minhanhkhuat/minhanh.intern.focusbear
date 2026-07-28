@@ -50,6 +50,7 @@ grouping tasks into explicit stages (such as separating In progress from Ready f
 
 
 
+<img width="1440" height="746" alt="Screenshot 2026-07-28 at 16 09 27" src="https://github.com/user-attachments/assets/8190b075-ea0c-491e-9228-ee047e6732c7" />
 
 
 
