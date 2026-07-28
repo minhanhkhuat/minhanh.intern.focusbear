@@ -1,4 +1,5 @@
-Research and Learn: Agile Workflows and Kanban
+# Agile Workflows and Kanban
+## Research and Learn
 
     1. A kanban board is a visual project management tool designed to help visualized work, limit work in progress and maximize efficiency. 
     It manages workflow by turning abstract into physical of digital cards that move across a board divided into vertical columns. This provides immediate, real-time visibility'
@@ -21,7 +22,7 @@ Research and Learn: Agile Workflows and Kanban
      - Exposes Bottlenecks immediately: If your "ready for review" column has a WIP limit of 3, and a 4th item finishes, the team cannot start new work. They must pause and help review existing work to clear the queue.
      - Improves lead time: It shortens the time it takes for a single task to go from start to finish, ensuring values is delivered to users faster
 
-Reflection:
+## Reflection:
 
     1. Managing Priorities and avoiding overload
     Kanban forces a strict focus on top-order priorities because the backlog is ranked vertically that the most critical task is always at the very top. By enforcing strict WIP limits, team members are physically protected fro taking on too much work at once. I shifts the team's mindset from "how many things can I start?" to "How many things can I finish?"
