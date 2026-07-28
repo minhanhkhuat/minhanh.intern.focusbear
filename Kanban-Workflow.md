@@ -33,6 +33,8 @@
     - Manage the work, not the people: Let the board tell the story of the project's health, removing micro-management out of the daily routine. 
 
 ## Tasks
+https://github.com/users/minhanhkhuat/projects/1
+
 
 
 
