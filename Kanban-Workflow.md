@@ -33,7 +33,20 @@
     - Manage the work, not the people: Let the board tell the story of the project's health, removing micro-management out of the daily routine. 
 
 ## Tasks
-https://github.com/users/minhanhkhuat/projects/1
+Project Board link: https://github.com/users/minhanhkhuat/projects/1
+
+Columns created: 
+- To do
+- In progress
+- Ready for review
+- Approved by bot
+
+Task moved Across Columns:
+    Task: 2-Agile workflows and Kanban
+    Status History: To do - In Progress ready for review
+
+Tracking improvement for my role: 
+grouping tasks into explicit stages (such as separating In progress from Ready for review) helps context switching an allows me to immediately spot bottleneck in my Data/AI intern tasks.
 
 
 
