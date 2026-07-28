@@ -1,19 +1,19 @@
 # Agile Workflows and Kanban
 ## Research and Learn
 
-    1. A kanban board is a visual project management tool designed to help visualized work, limit work in progress and maximize efficiency. 
-    It manages workflow by turning abstract into physical of digital cards that move across a board divided into vertical columns. This provides immediate, real-time visibility'
+    1. A kanban board is a visual project management tool designed to help visualize work, limit work in progress and maximize efficiency. 
+    It manages workflow by turning abstract ideas into physical or digital cards that move across a board divided into vertical columns. This provides immediate, real-time visibility'
     
     2. The different columns represent
     Columns represent the distinct stages a task goes through from start to finish. In standard software development or repo workflows, they typically include:
-    - To do/ not started: A prioritized repository of all futere work items, features, bugs or tass that need to be tackled
-    - In progress/ Doing: tasks currently activately being worked on by a teaam member
+    - To do/ not started: A prioritized repository of all future work items, features, bugs or tasks that need to be tackled
+    - In progress/ Doing: tasks currently actively being worked on by a team member
     - Blocked/ on hold: Tasks that have started but cannot proceed because of external dependencies
     - Ready for review/ QA: Tasks where development is finished, but they required peer review, automated testing or manual quality assurance
-    - Done: completed tasks that meet the team's "definition of done" and are successfully devivered or deployed.
+    - Done: completed tasks that meet the team's "definition of done" and are successfully delivered or deployed.
 
     3.Task Movement and responsibility
-    How tasks move: Task move from left to right across the board. In a healthy Kanban system, this is driven by a pull systems that team members pull a new task from the top of the backlog only when they have the capacity to take on network, rather than having tasks pushed onto them
+    How tasks move: Task move from left to right across the board. In a healthy Kanban system, this is driven by a pull system that team members pull a new task from the top of the backlog only when they have the capacity to take on network, rather than having tasks pushed onto them
     Who updates them: The individual assignee or owner of the task is primarily responsible for dragging the card to the next column as soon as its real-world status changes. However, automation ofter updates status automatically 
 
     4. Benefits of limiting work in progress
@@ -30,7 +30,10 @@
     2. Improving workflows with Kanban principles
     - Visualised the invisible: map out every single step of your real-world process. If code reviews take a long time, don't hide them in "In progress", give them their own column.
     - Focus on flow, not busyness: optimise how fast a card crosses the board. If cards stall in "blocked", schedule. brief daily check in to clear roadblocks
-    - Manage the work, not the people: Let the board tell the story of the project's health, removing micro-management out of the daily routi
+    - Manage the work, not the people: Let the board tell the story of the project's health, removing micro-management out of the daily routine. 
+
+## Tasks
+
 
 
 
