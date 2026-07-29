@@ -1,0 +1,12 @@
+# Competitive Landscape
+1. What makes Focus Bear different from these apps?
+Focus Bear bridges a massive gap that other apps split down the middle. Competitors are usually either pure blockers (Freedom, Cold Turkey) or pure routine trackers (Tiimo, Routinery). Focus Bear is unique because it forces a symbiotic relationship between the two: it uses strict system-level blocking to actively defend your routines while you are doing them. It doesn't just remind you to do a habit; it physically clears out the digital noise so your brain has the space to initiate the task.
+
+2. If you were a user, why would you choose Focus Bear over competitors?
+As a user struggling with intense executive dysfunction or time blindness, I would choose Focus Bear because it handles task initiation friction better than anything else. Instead of giving me a notification that I can easily swipe away to go look at social media, Focus Bear takes over the digital workspace. It acts as a supportive external structure that guides me micro-step by micro-step through low-friction habits (like stretching or morning routines) without letting me fall down a distraction rabbit hole.
+
+3. What’s one feature that other apps have that Focus Bear doesn’t?
+Visual Timeline Scheduling (Tiimo): Tiimo utilizes an incredibly intuitive, highly visual "wheel of time" layout and color-coded linear timelines that instantly click for visual thinkers and individuals with ADHD. Focus Bear relies more heavily on structured, text-and-timer sequences. Furthermore, tools like Tiimo offer robust, native Apple Watch and Android smartwatch integrations that make checking routines frictionless without ever needing to look at a phone screen (which is itself a major distraction trigger).
+
+4. Based on your research, what’s one improvement you think Focus Bear could make?
+Introduce a "Low-Friction Quick Onboarding" or Setup Wizard: The biggest bottleneck for neurodivergent users is admin fatigue. Right now, configuring Focus Bear requires a high initial cognitive load to set up routines, customize blocks, and grant system permissions across devices. If a user is already feeling overwhelmed, a complex setup will trigger task paralysis and cause them to abandon the app immediately. Focus Bear could implement a highly simplified onboarding wizard—offering pre-built, one-click templates tailored to specific needs ("Student Routine", "Remote Work Focus"), allowing users to experience immediate value before tweaking advanced settings.
