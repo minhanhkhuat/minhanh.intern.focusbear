@@ -1,26 +1,11 @@
 # Use of AI tools
-## Research and learn
-1. AI Tools Typically Used by Data Analysts
-  - Coding and Query Assistants: GitHub Copilot, ChatGPT or Claude for writing, debugging and optimizing SQL queries, Python scripts (pandas, numpy), and R code.
-  - Automated Data Cleaning and Visualization: Tools embedded in BI platforms to spot outliers or generate instant charts.
-  - Documentation and Translation: Large Language Models used to draft clean documentation, explain legacy data pipelines, or translate business requirements into technical specs.
-2. Benefits and Risks of AI in Data Analytics
-  - Benefits:
-    - Massive time savings when writing repetitive boilerplate code or complex regex patterns.
-    - Faster debugging: AI can read an error stack trace and instantly suggest solutions.
-    - Brainstorming fresh approaches to statistical modeling or data structure strategies.
-  - Risks:
-    - AI might confidently invent synthetic data functions, Python libraries, or fake SQL syntax that doesn't exist.
-    - AI might write code that runs perfectly but uses the wrong business logic, leading to inaccurate reports.
-    - Accidentally feeding sensitive business metrics or proprietary data schemas into public models.
-3. What Information Should Never Be Entered Into AI Tools
-  - Personally Identifiable Information: Customer names, emails, addresses, user IDs, or employee records.
-  - Proprietary Business Data: Raw financial metrics, internal strategy decks, or active business datasets.
-  - Sensitive Code Infrastructure: Hardcoded API keys, server credentials, production database connection strings, or highly proprietary algorithms.
+## Reflection 
+1. I use AI when I need to figure out syntax roadblocks, structure a long boilerplate SQL script, or look up how to write a difficult RegEx. It saves me tons of time that I would otherwise spend digging through forums. However, I never let AI think through the actual analytics strategy or design the data logic for me. Interpreting what data metrics mean, structuring clean experiments, and ensuring database relationships are structurally sound requires human logic that AI simply can't replicate.
+2. To keep my own technical analytical skills sharp, I follow a personal rule: I always try to write code or debug a script manually first. If I get completely stuck or hit a wall, I will consult an AI tool. Once it generates an answer, I don't just copy-paste it blindly, I force myself to study why the code works before typing it into my local workstation. This ensures I'm actually learning the concepts rather than using AI as a mental crutch.
+3. Data security is incredibly important to me as an analyst. I never, under any circumstances, upload real data files or copy-paste actual database tables into public models. If I need help fixing a broken SQL script or transforming data with Python, I entirely anonymize the text beforehand. I scrub out any references to Focus Bear, replace actual table structures with generic column placeholders and use mock data to describe the problem safely.
 
-4. How to Fact-Check and Validate AI-Generated Content
-  - Dry-Run Code: Never push AI generated SQL or Python directly to production. Test it locally or in a staging environment using dummy data.
-  - Verify Row Counts and Aggregations: When using an AI generated query, manually verify the output using a known benchmark dataset to ensure rows aren't being dropped or duplicated.
-  - Cross-Reference Documentation: Check the official documentation of libraries or SQL engines if the AI suggests an unfamiliar function or syntax.
-
-## Reflection
+## Tasks
+Task Improved: Optimizing an Analytical SQL Query
+1. Context: I needed to rewrite a complex SQL query that combined multiple subqueries to extract data trends efficiently. The original query was slowing down performance due to poor formatting.
+2. AI Evaluation: I provided the AI with an entirely anonymized skeleton of the query (with mock table and column names). The AI correctly suggested using Common Table Expressions to clean up the query structure and make it highly legible.
+3. Critical Review and Edits: The generated script was visually cleaner, but it incorrectly assumed a FULL OUTER JOIN structure that would have resulted in data duplication. I had to manually edit the script to change the joins to LEFT JOIN to preserve correct data matching. This proved why checking the structural logic of the output is vital.
