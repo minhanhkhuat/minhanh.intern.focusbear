@@ -1,6 +1,6 @@
 # Occupational Health & Safety (OHS) for Desk-Based Work
 ## Reflection
-1. Equipment changes: Using external monitor.
+1. Equipment changes: Using external monitor. 
 2. Behavioural changes: sitting upright, taking regular breaks, enough light.
 3. Use Focus Bear to schedule movement breaks.
 
@@ -15,4 +15,4 @@
 After executing a full workday utilizing these exact parameters and adhering to every Focus Bear movement prompt, I recorded the following distinct improvements:
 - Zero Neck & Shoulder Stiffness: Elevating the screen completely eliminated the usual dull ache at the base of my neck that typically sets in by the afternoon when working flat on a laptop.
 - Reduced Eyestrain: Forcing myself to look away from the screen during the scheduled intervals drastically cut down on late-day eye fatigue and helped maintain sharp focus throughout the entire analytical block.
-- Consistent Energy Levels: Instead of sitting immobilized for hours at a time, the periodic 45-minute movement prompts broke up the sedentary strain, keeping my physical energy high and my productivity steady.
+- Consistent Energy Levels: Instead of sitting immobilized for hours at a time, the periodic 45-minute movement prompts broke up the sedentary strain, keeping my physical energy high and my productivity steady.  ..
