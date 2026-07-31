@@ -68,3 +68,58 @@ When running the linter against the codebase, it highlighted several stylistic d
 
 Yes, formatting the code made a massive difference in legibility. By enforcing a clean, uniform grid of text, the hierarchical nesting of code blocks became instantly scannable. Indentations perfectly mirror execution layers, trailing commas make future git diffs much smaller, and consistent quote rules give the entire codebase a unified, polished rhythm that looks like it was written by a single engineer.
 
+# Naming Variables & Functions
+
+1. What makes a good variable or function name?
+- Intention-Revealing: A good name tells you exactly why the variable exists, what it holds, and how it is used without needing to look at the implementation details.
+- Pronounceable and Searchable: Avoid arbitrary abbreviations (like `usrLst` instead of `userList`). Names should be easily searchable using standard editor shortcuts.
+- Consistent Conventions: Follow language-specific paradigms strictly—such as `camelCase` for JavaScript variables/functions, `snake_case` for Python, or `UPPER_CASE` for global constants.
+- Verb-Noun Structure for Functions: Functions perform actions, so their names should start with a verb.
+
+2. What issues can arise from poorly named variables?
+- Increased Onboarding Time: New developers (or your future self) will spend hours deciphering cryptic shortcuts like `d`, `temp`, or `data1` instead of focusing on actual feature building.
+- Hidden Logic Bugs: When names are vague or misleading (e.g., a function named `getUser()` that secretly updates database records as a side effect), developers will inevitably misuse them, introducing critical system bugs.
+- Comment Clutter: Poor naming forces developers to write paragraphs of inline comments just to explain what a variable represents, polluting the codebase.
+
+
+##  Unclear Coding Example
+
+Below is a snippet demonstrating poor naming practices:
+
+```javascript
+function p(u, d) {
+  let a = 0;
+  for (let i = 0; i < u.length; i++) {
+    if (u[i].s === 'active' && u[i].t > d) {
+      a += u[i].t;
+    }
+  }
+  return a;
+}
+```
+
+## Refactoring code
+
+```javascript
+function calculateActiveUserTotalSpending(users, cutoffDate) {
+  let totalSpending = 0;
+  
+  for (let i = 0; i < users.length; i++) {
+    const currentUser = users[i];
+    const isActiveUser = currentUser.status === 'active';
+    const spentAfterCutoff = currentUser.transactionDate > cutoffDate;
+    
+    if (isActiveUser && spentAfterCutoff) {
+      totalSpending += currentUser.transactionAmount;
+    }
+  }
+  
+  return totalSpending;
+}
+
+3. How refactoring improved code readability:
+- Self-Documenting Logic: By expanding properties to status, transactionDate, and transactionAmount, the business constraints are readable as plain English.
+
+- Descriptive Function Name: Anyone scanning the project now knows exactly what output to expect from calculateActiveUserTotalSpending().
+
+- Extracted Conditions: Breaking the complex if block down into descriptive boolean variables (isActiveUser, spentAfterCutoff) makes it highly scannable and easy to modify later.
