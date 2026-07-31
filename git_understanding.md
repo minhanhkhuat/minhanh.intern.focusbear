@@ -21,11 +21,11 @@ Git separates staging and committing to give developers absolute control and pre
 - Reviewing Code Line-by-Line: Staging lets you double-check your own diffs in the Git client before making them official. You can stage individual files as you confirm they work perfectly, leaving experimental changes unstaged.
 - Saving Intermediate Progress Safely: If you are halfway through a complex feature and want to freeze a working state of a specific file while you continue messing with others, you can stage it to protect that milestone without polluting the main commit log.
 
-## Git concept: staging vs committing
+## Branching & Team Collaboration
 
 1. Why is pushing directly to main problematic?
-Pushing directly to the `main` branch is highly problematic for several reasons:
-- Breaking Production Code: The `main` branch represents the stable, working version of the application. Committing directly increases the risk of introducing untested bugs, syntax errors, or broken code that could bring down the entire system for users or block other developers.
+Pushing directly to the main branch is highly problematic for several reasons:
+- Breaking Production Code: The main branch represents the stable, working version of the application. Committing directly increases the risk of introducing untested bugs, syntax errors, or broken code that could bring down the entire system for users or block other developers.
 - Lack of Isolation: Without branches, multiple developers working on completely different features will constantly overwrite or interfere with each other's code, leading to chaotic development tracks and frequent deployment failures.
 
 2. How do branches help with reviewing code?
