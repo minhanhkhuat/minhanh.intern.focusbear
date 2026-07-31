@@ -270,7 +270,9 @@ function sendSMSAlert(user, message) {
   // (SMS sending implementation details...)
 }
 ```
-## Clean Refactoring
+
+ Clean Refactoring
+
 ```javascript
 // Centralized, single-purpose formatting function
 function formatSystemAlertLog(userName, message) {
