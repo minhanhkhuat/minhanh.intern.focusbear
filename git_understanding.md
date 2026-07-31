@@ -57,3 +57,23 @@ If two people edit the exact same lines of the same file on different branches, 
 - What it does: Shows a line-by-line breakdown of a specific file, annotating every single line with the author who last modified it, the commit hash, and the timestamp.
 - Real-world use case: You run into a confusing, undocumented block of code or an edge-case bug. Instead of guessing why it's there, you use `git blame` to find out exactly who wrote it and when, so you can reach out to them for context or check the original commit message.
 - What surprised me: Despite the slightly aggressive name, it isn't actually about pointing fingers. It is incredibly satisfying to see exactly how a single file is a living tapestry woven by different developers over weeks or months.
+
+# Debugging with git bisect
+
+1. What does git bisect do?
+
+`git bisect` uses a binary search algorithm to systematically narrow down the exact commit that introduced a bug or regression in your project history. 
+- You start the process by giving Git a "bad" checkpoint (usually your current broken state) and a known "good" checkpoint (a point in the past where you are 100% sure the feature worked perfectly).
+- Git then automatically splits the commit history in half and checks out a commit right in the middle. 
+- You test the code at that middle commit and tell Git whether it is `good` or `bad`. Git repeats this splitting process until it isolates the exact, single commit that broke the code.
+
+2. When would you use it in a real-world debugging situation?
+
+You would use `git bisect` in situations where:
+- The Bug Origin is Unknown: A feature that worked perfectly a few weeks ago is suddenly broken today, but nobody knows exactly when or how it happened because hundreds of commits have been merged since then.
+- Complex Regressions: The codebase is massive, and tracing the source code manually or looking at standard error logs isn't immediately revealing where the structural logic broke down.
+
+3. How does it compare to manually reviewing commits?
+
+- Efficiency O(log n) vs O(n): Manually checking out commits one-by-line or scrolling through endless code diffs is a linear process ($O(n)$). If there are 100 commits to check, it could take hours. `git bisect` uses binary search O(log n), meaning it will pinpoint the exact broken commit out of 100 possibilities in roughly 7 steps or fewer.
+- Reduces Human Error: Instead of guessing which developer's commit might have caused the issue based on vague commit messages, `git bisect` forces you to strictly rely on the physical state of the code at that exact snapshot, removing guesswork from the equation.
