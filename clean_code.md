@@ -269,9 +269,9 @@ function sendSMSAlert(user, message) {
   console.log(`Sending SMS... ${dynamicLog}`);
   // (SMS sending implementation details...)
 }
-
+```
 ## Clean Refactoring
-
+```javascript
 // Centralized, single-purpose formatting function
 function formatSystemAlertLog(userName, message) {
   const formattedTime = new Date().toLocaleDateString('en-US', {
