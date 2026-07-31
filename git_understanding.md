@@ -75,5 +75,25 @@ You would use `git bisect` in situations where:
 
 3. How does it compare to manually reviewing commits?
 
-- Efficiency O(log n) vs O(n): Manually checking out commits one-by-line or scrolling through endless code diffs is a linear process ($O(n)$). If there are 100 commits to check, it could take hours. `git bisect` uses binary search O(log n), meaning it will pinpoint the exact broken commit out of 100 possibilities in roughly 7 steps or fewer.
+- Efficiency O(log n) vs O(n): Manually checking out commits one-by-line or scrolling through endless code diffs is a linear process O(n). If there are 100 commits to check, it could take hours. `git bisect` uses binary search O(log n), meaning it will pinpoint the exact broken commit out of 100 possibilities in roughly 7 steps or fewer.
 - Reduces Human Error: Instead of guessing which developer's commit might have caused the issue based on vague commit messages, `git bisect` forces you to strictly rely on the physical state of the code at that exact snapshot, removing guesswork from the equation.
+
+# Writing Meaningful Commit Messages
+
+1. What makes a good commit message?
+
+A good commit message follows a standardized, predictable format (such as the Conventional Commits specification). Key traits include:
+- Imperative Mood in the Subject Line: The first line should complete the sentence: "If applied, this commit will..." 
+- Conciseness (The 50/72 Rule): Keep the subject line under 50 characters, followed by a blank line, and wrap the body text at 72 characters.
+- Separation of "What" and "Why" from "How": The subject line states *what* changed. The body should explain why the change was necessary and the context behind it, leaving the how to be read directly in the code diff itself.
+
+2. How does a clear commit message help in team collaboration?
+
+- Accelerates Code Reviews: When reviewers open a Pull Request, well-structured messages give them immediate context before they even look at the lines of code, reducing cognitive load.
+- Streamlines Debugging: Tools like `git log` and `git blame` become infinitely more powerful. Developers can scan the history rapidly to pinpoint exactly when a business rule or feature constraint was modified.
+- Automates Changelogs: Many open-source and enterprise teams use scripts to read well-structured commits (like `feat:`, `fix:`, `chore:`) to automatically generate software release notes.
+
+3. How can poor commit messages cause issues later?
+
+- Wasted Time During Regressions: Messages like `fixed stuff`, `debug`, or `working on PR` force future developers to manually check out and read every single code diff to understand what that commit actually did.
+- Loss of Historical Context: Code comments tell you *what* the code is doing now, but commit messages tell you why a choice was made months ago. Without clear messages, teams often accidentally re-introduce old bugs because they didn't understand why a specific workaround was added in the past.
