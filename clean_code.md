@@ -229,3 +229,64 @@ function processOrderCheckoutClean(cartItems, userAccount) {
     }
   };
 }
+```
+
+# Avoiding Code Duplication
+1. What were the issues with duplicated code?
+- When the same logic is copy-pasted across multiple places, making a single business rule change means hunting down every single occurrence to update it manually. 
+- If you update the logic in three places but miss a fourth, you instantly introduce silent, hard-to-track bugs where different parts of the application behave differently under the same conditions.
+- Repetitive blocks increase the physical size of the files, making the project harder to read, navigate, and scan efficiently.
+
+2. How did refactoring improve maintainability?
+
+Refactoring extracts the repetitive blocks into a single centralized, reusable utility function. If the business requirements or calculation rules change in the future, developers only need to update the code in **one single place**. Every file referencing that utility instantly inherits the update, which guarantees system consistency, reduces human error, and keeps code footprints clean.
+
+---
+
+## Duplicated Logic Example
+
+```javascript
+function sendEmailAlert(user, message) {
+  // Duplicated formatting logic
+  const formattedTime = new Date().toLocaleDateString('en-US', {
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+  const dynamicLog = `[${formattedTime}] ALERT for ${user.name.toUpperCase()}: ${message}`;
+  
+  console.log(`Sending Email... ${dynamicLog}`);
+  // (Email sending implementation details...)
+}
+
+function sendSMSAlert(user, message) {
+  // Identical duplicated formatting logic
+  const formattedTime = new Date().toLocaleDateString('en-US', {
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+  const dynamicLog = `[${formattedTime}] ALERT for ${user.name.toUpperCase()}: ${message}`;
+  
+  console.log(`Sending SMS... ${dynamicLog}`);
+  // (SMS sending implementation details...)
+}
+
+## Clean Refactoring
+
+// Centralized, single-purpose formatting function
+function formatSystemAlertLog(userName, message) {
+  const formattedTime = new Date().toLocaleDateString('en-US', {
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+  return `[${formattedTime}] ALERT for ${userName.toUpperCase()}: ${message}`;
+}
+
+function sendEmailAlertClean(user, message) {
+  const alertLog = formatSystemAlertLog(user.name, message);
+  console.log(`Sending Email... ${alertLog}`);
+}
+
+function sendSMSAlertClean(user, message) {
+  const alertLog = formatSystemAlertLog(user.name, message);
+  console.log(`Sending SMS... ${alertLog}`);
+}
