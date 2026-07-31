@@ -46,3 +46,25 @@ WHERE
     AND orders.created_at >= '2026-01-01'
 ORDER BY 
     orders.total_amount DESC;
+
+```
+
+# Code Formatting & Style Guides
+
+1. Why is code formatting important?
+- Reduces Cognitive Load: When code formatting is uniform, developers don't have to waste mental energy adapting to different coding styles (like mixed single/double quotes, trailing commas, or varying indentation spacing) across files.
+- Prevents Human Error: Automated formatting catches missing semi-colons, brackets, or dangling commas that could cause structural runtime errors before the code is ever committed.
+- Eliminates "Style Wars" in Code Reviews: Automating formatting rules through a tool means code review discussions focus entirely on architecture, business logic, and bugs, rather than arguing over tabs vs. spaces or bracing styles.
+
+2. What issues did the linter detect?
+
+When running the linter against the codebase, it highlighted several stylistic discrepancies and structural warnings:
+- Unused Variables: Flagged local variables or parameters that were declared but never actually read or used in the logic.
+- Inconsistent Quote Styling: Detected strings wrapped in double quotes (`"`) when the system standard preferred single quotes (`'`) per the Airbnb rules.
+- Missing or Extraneous Semicolons: Highlighted lines missing structural termination markers.
+- Formatting Violations: Identified irregular indentation patterns and missing trailing commas in multiline object declarations.
+
+3. Did formatting the code make it easier to read?
+
+Yes, formatting the code made a massive difference in legibility. By enforcing a clean, uniform grid of text, the hierarchical nesting of code blocks became instantly scannable. Indentations perfectly mirror execution layers, trailing commas make future git diffs much smaller, and consistent quote rules give the entire codebase a unified, polished rhythm that looks like it was written by a single engineer.
+

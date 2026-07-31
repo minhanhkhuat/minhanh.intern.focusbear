@@ -10,3 +10,4 @@ Because iTerm2 is highly recommended within the macOS developer community becaus
 
 ## Most Useful Command Learned
 The most useful command I learned today is `ls -la`. While the basic `ls` command lists visible files, adding the `-la` flags allows me to see all hidden configuration files (like `.git`) along with detailed file permissions and modify dates in a clean list format.
+
