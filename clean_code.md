@@ -116,6 +116,7 @@ function calculateActiveUserTotalSpending(users, cutoffDate) {
   
   return totalSpending;
 }
+```
 
 3. How refactoring improved code readability:
 - Self-Documenting Logic: By expanding properties to status, transactionDate, and transactionAmount, the business constraints are readable as plain English.
