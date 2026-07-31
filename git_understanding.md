@@ -85,7 +85,7 @@ You would use `git bisect` in situations where:
 A good commit message follows a standardized, predictable format (such as the Conventional Commits specification). Key traits include:
 - Imperative Mood in the Subject Line: The first line should complete the sentence: "If applied, this commit will..." 
 - Conciseness (The 50/72 Rule): Keep the subject line under 50 characters, followed by a blank line, and wrap the body text at 72 characters.
-- Separation of "What" and "Why" from "How": The subject line states *what* changed. The body should explain why the change was necessary and the context behind it, leaving the how to be read directly in the code diff itself.
+- Separation of "What" and "Why" from "How": The subject line states what changed. The body should explain why the change was necessary and the context behind it, leaving the how to be read directly in the code diff itself.
 
 2. How does a clear commit message help in team collaboration?
 
@@ -97,3 +97,22 @@ A good commit message follows a standardized, predictable format (such as the Co
 
 - Wasted Time During Regressions: Messages like `fixed stuff`, `debug`, or `working on PR` force future developers to manually check out and read every single code diff to understand what that commit actually did.
 - Loss of Historical Context: Code comments tell you *what* the code is doing now, but commit messages tell you why a choice was made months ago. Without clear messages, teams often accidentally re-introduce old bugs because they didn't understand why a specific workaround was added in the past.
+
+# Creating & Reviewing Pull Requests
+
+1. Why are PRs important in a team workflow?
+- Quality Assurance Gatekeeper: PRs ensure that no code enters the main codebase without being reviewed by at least one other engineer, drastically reducing the number of bugs that make it to production.
+- Knowledge Sharing: Reviewing a PR allows team members to stay informed about changes happening in parts of the application they aren't actively working on, preventing siloed knowledge.
+- Continuous Integration Integration: PRs serve as the perfect trigger point for automated testing pipelines (CI/CD) to run linting, formatting, and unit tests before human reviewers even look at the code.
+
+2. What makes a well-structured PR?
+
+A great Pull Request provides immediate clarity and respects the reviewer's time:
+- Clear, Actionable Title: Uses conventional framing so reviewers know the scope at a glance.
+- The "Why" and "What" Description: A summary explaining what problem this PR solves and why the chosen approach was taken.
+- Testing Instructions: Step-by-step guidance on how the reviewer can pull the branch locally and verify that the feature works as intended.
+- Visual Aids: Screenshots or GIFs showing the before-and-after state for any user interface (UI) modifications.
+
+3. What did you learn from reviewing an open-source PR?
+
+Reviewing public open-source pull requests highlights the importance of asynchronous empathy and constructive feedback. In large projects, reviews aren't just about catching syntax errors—they are deeply focused on architectural patterns, edge cases, and future maintenance costs. I observed that effective code reviews use polite, non-defensive language, frame critiques as questions and focus entirely on improving the codebase rather than criticizing the author.
