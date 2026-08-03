@@ -1,4 +1,5 @@
 # Agile Workflows and Kanban
+
 ## Research and Learn
 
     1. A kanban board is a visual project management tool designed to help visualize work, limit work in progress and maximize efficiency. 
@@ -22,7 +23,7 @@
      - Exposes Bottlenecks immediately: If your "ready for review" column has a WIP limit of 3, and a 4th item finishes, the team cannot start new work. They must pause and help review existing work to clear the queue.
      - Improves lead time: It shortens the time it takes for a single task to go from start to finish, ensuring values is delivered to users faster
 
-## Reflection:
+## Reflection
 
     1. Managing Priorities and avoiding overload
     Kanban forces a strict focus on top-order priorities because the backlog is ranked vertically that the most critical task is always at the very top. By enforcing strict WIP limits, team members are physically protected fro taking on too much work at once. I shifts the team's mindset from "how many things can I start?" to "How many things can I finish?"
@@ -33,9 +34,11 @@
     - Manage the work, not the people: Let the board tell the story of the project's health, removing micro-management out of the daily routine. 
 
 ## Tasks
-Project Board link: https://github.com/users/minhanhkhuat/projects/1
 
-Columns created: 
+Project Board link: <https://github.com/users/minhanhkhuat/projects/1>
+
+Columns created:
+
 - To do
 - In progress
 - Ready for review
@@ -45,14 +48,7 @@ Task moved Across Columns:
     Task: 2-Agile workflows and Kanban
     Status History: To do - In Progress ready for review
 
-Tracking improvement for my role: 
+Tracking improvement for my role:
 grouping tasks into explicit stages (such as separating In progress from Ready for review) helps context switching an allows me to immediately spot bottleneck in my Data/AI intern tasks.
 
-
-
 <img width="1440" height="746" alt="Screenshot 2026-07-28 at 16 09 27" src="https://github.com/user-attachments/assets/8190b075-ea0c-491e-9228-ee047e6732c7" />
-
-
-
-
-

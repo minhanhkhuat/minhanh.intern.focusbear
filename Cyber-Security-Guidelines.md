@@ -1,11 +1,13 @@
 # Cyber Security
+
 ## Research and Learn
+
 1. Common Remote Work Cyber Security Threats
    - Phishing & Social Engineering: Fraudulent emails, messages, or calls designed to trick you into sharing credentials or sensitive data.
    - Unsecured Wi-Fi Networks: Using public or home Wi-Fi networks without strong encryption, which can allow bad actors to intercept data traffic.
    - Physical Device Vulnerability: Unauthorized access to laptops or phones by housemates, guests, or strangers in public spaces (e.g., cafes).
    - Outdated Software: Failing to apply security patches, leaving vulnerabilities exposed for hackers to exploit.
-     
+
 2. Best Practices for Device & Account Security
    - Keep Software Updated: Regularly update your operating system, web browsers, and apps to patch known security vulnerabilities.
    - Use a Firewall & Antivirus: Ensure your built-in firewall is active and reputable security software is scanning your machine.
@@ -29,7 +31,8 @@ Even in a home environment, an unlocked computer is an open gateway. If a device
    - Why it matters: 2FA adds a critical second layer of defense. Even if a malicious actor successfully steals or guesses your password, they cannot access your account without the time sensitive secondary token (e.g., from an authenticator app).
    - When to enable it: You should enable 2FA on every account that supports it, prioritized heavily for core work infrastructure (GitHub, Slack, Google Workspace, and password managers).
 
-## Reflection 
+## Reflection
+
 1. Current measures and ares for improvement
    - Current status: I utilize strong, complex passwords for my primary platforms and maintain a clean environment when working from home.
    - Improvement: I need to ensure that every single auxiliary account has a completely unique password and I must eliminate any tendency to reuse core variations of passwords.
@@ -46,21 +49,9 @@ Even in a home environment, an unlocked computer is an open gateway. If a device
    - Terminate all other active sessions/devices via the account settings.
    - Proactively report the event to my supervisor and the internal security point-of-contact with relevant screenshots or logs.
 
-## Tasks:
+## Tasks
+
 1. Enabled 2FA via a secure Authenticator App across all primary work accounts
 2. Consolidated all credentials into a dedicated password manager. Removed any plain text records or saved browser credentials for high-security environments.
 3. Configured systems preferences on both my workstation and mobile device to automatically activate a secure lock-screen demanding biometric or password entry after 2 mins of inactivity.
 4. My new cyber security habit: I will never leave my workstation unlocked when stepping away from my desk, even for a moment and I strictly seperate my professional dev environment from personal web browsing activities.
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -13,6 +13,7 @@ When inspecting raw API responses directly in the browser, the data is usually u
 Accessible directly within Chrome DevTools, it serves as an automated auditing tool for measuring web page performance, accessibility, SEO, and progressive web app standards.
 
 ## The most useful thing I learned
-The most useful thing I learned today is how much debugging power can be moved directly into the browser. Before utilizing these tools, debugging global state or checking deeply nested component trees meant littering the codebase with countless `console.log()` statements. 
+
+The most useful thing I learned today is how much debugging power can be moved directly into the browser. Before utilizing these tools, debugging global state or checking deeply nested component trees meant littering the codebase with countless `console.log()` statements.
 
 Learning how to leverage **Redux DevTools** for time-travel debugging completely changes the game—being able to step backward and forward through UI actions to see exactly where data breaks makes troubleshooting state logic significantly faster and less stressful.

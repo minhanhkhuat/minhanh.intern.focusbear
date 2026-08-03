@@ -5,11 +5,13 @@ I experimented with GitHub Copilot (specifically using the GitHub Copilot Chat e
 ## Performance Evaluation
 
 1. What worked well:
+
 - AI is exceptionally fast at generating repetitive text formats, markdown outlines, and initial file structures, saving a massive amount of manual typing.
 - Passing environment errors or git configuration prompts into the chat resulted in immediate, step-by-step guidance on how to fix things (like setting global git credentials or resolving setup errors).
 - Asking the AI for simple breakdowns of new workflows or technical configurations provided instant clarity with actionable examples.
 
 2. What didn’t work well:
+
 - When working with unique file names or specific project settings, the AI sometimes hallucinates boilerplate conventions that don't match the exact folder setup unless explicitly told. If you don't double-check the syntax or versions it assumes (like tool versions or commands), it can confidently output slightly outdated flags.
 
 ## Key Reflection

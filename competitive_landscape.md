@@ -1,4 +1,5 @@
 # Competitive Landscape
+
 1. What makes Focus Bear different from these apps?
 Focus Bear bridges a massive gap that other apps split down the middle. Competitors are usually either pure blockers (Freedom, Cold Turkey) or pure routine trackers (Tiimo, Routinery). Focus Bear is unique because it forces a symbiotic relationship between the two: it uses strict system-level blocking to actively defend your routines while you are doing them. It doesn't just remind you to do a habit; it physically clears out the digital noise so your brain has the space to initiate the task.
 

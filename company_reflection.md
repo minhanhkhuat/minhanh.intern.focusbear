@@ -6,6 +6,7 @@
 I also see similar focus blockages when helping younger kids with their schoolwork. The issue is never a lack of intelligence; it’s just that an empty, open-ended timeline causes immediate overwhelm.
 
 4. If my friends or classmates used Focus Bear, it would help them by taking the pressure off their decision-making:
+
 - It hides the clutter: Instead of seeing an intimidating, massive to-do list all day, it forces the brain to just look at one single step at a time.
 - It handles the discipline for you: By physically blocking distracting sites before you can even make the impulsive choice to open them, it saves a lot of mental energy.
 - It mandates breathing room: It forces actual breaks so they don't hyper-focus for six hours straight and end up completely exhausted the next day.
