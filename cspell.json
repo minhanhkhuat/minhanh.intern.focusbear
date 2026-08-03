@@ -1,0 +1,19 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "minh",
+    "anh",
+    "eslint",
+    "prettier",
+    "linter",
+    "linting",
+    "workflows",
+    "repo",
+    "codebase"
+  ],
+  "ignorePaths": [
+    "node_modules/**",
+    ".git/**"
+  ]
+}
