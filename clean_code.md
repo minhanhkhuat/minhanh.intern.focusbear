@@ -520,3 +520,60 @@ function processUserRefundClean(user, refundAmount) {
   return `Refunded $${refundAmount.toFixed(2)} successfully. New balance: $${user.wallet.balance.toFixed(2)}`;
 }
 ```
+
+# Writing Unit Tests for Clean Code
+
+
+1. How do unit tests help keep code clean?
+- Forces Modular Design: It is incredibly difficult to write tests for long, tangled functions with tight dependencies. To make code testable, you are naturally forced to write small, isolated, single-purpose functions that adhere to clean code principles.
+- Fearless Refactoring: Codebases naturally degrade over time as new features are added. Having a comprehensive test suite means you can refactor, clean up, or optimize complex logic instantly, knowing that if you break anything, a test will immediately turn red.
+- Acts as Living Documentation: Well-written unit tests serve as executable documentation. Instead of reading out-of-date text descriptions, a new developer can simply look at the test assertions to understand exactly how a function is expected to handle various inputs.
+
+2. What issues did you find while testing?
+When writing unit tests for existing functions, several architectural hidden flaws immediately came to light:
+- Unhandled Edge Cases: Functions that worked fine during standard use crashed when passed edge-case inputs like empty arrays, `null` parameters, or negative boundary numbers.
+- Implicit Side Effects: Some functions were difficult to isolate because they were secretly reading from or modifying global state, requiring refactoring to make them pure, deterministic functions.
+- Brittle Logic Trees: Complex nested blocks required a massive, exhausting matrix of test parameters to reach full code coverage, highlighting that the production logic itself needed to be flattened using guard clauses.
+
+
+## Unit Testing Code Example (Jest Framework)
+
+Below is an isolated function alongside its corresponding Jest unit test suite, demonstrating how to validate both expected outcomes and edge-case exceptions:
+
+1. The Production Function (`mathUtils.js`)
+```javascript
+function calculatePercentage(value, total) {
+  if (typeof value !== 'number' || typeof total !== 'number') {
+    throw new Error('Inputs must be numeric values.');
+  }
+  if (total === 0) {
+    return 0; // Guard clause against division by zero errors
+  }
+  return (value / total) * 100;
+}
+
+module.exports = { calculatePercentage };
+```
+2. The Jest Test Suite
+```javascript
+const { calculatePercentage } = require('./mathUtils');
+
+describe('calculatePercentage() Unit Test Suite', () => {
+  // Test case 1: Standard happy path execution
+  test('should accurately calculate percentage for standard positive integers', () => {
+    expect(calculatePercentage(25, 100)).toBe(25);
+    expect(calculatePercentage(3, 4)).toBe(75);
+  });
+
+  // Test case 2: Edge case validation (Division by zero)
+  test('should handle a total of 0 gracefully by returning 0', () => {
+    expect(calculatePercentage(50, 0)).toBe(0);
+  });
+
+  // Test case 3: Error path validation (Type check exceptions)
+  test('should throw a clear error message when passed string inputs', () => {
+    expect(() => calculatePercentage('20', 100)).toThrow('Inputs must be numeric values.');
+    expect(() => calculatePercentage(20, null)).toThrow('Inputs must be numeric values.');
+  });
+});
+```
