@@ -69,12 +69,38 @@ When running the linter against the codebase, it highlighted several stylistic d
 
 Yes, formatting the code made a massive difference in legibility. By enforcing a clean, uniform grid of text, the hierarchical nesting of code blocks became instantly scannable. Indentations perfectly mirror execution layers, trailing commas make future git diffs much smaller, and consistent quote rules give the entire codebase a unified, polished rhythm that looks like it was written by a single engineer.
 
+## Workspace Configuration Files
+.prettierrc
+{
+  "semi": true,
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "printWidth": 80,
+  "tabWidth": 2
+}
+.eslintrc.json
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["airbnb-base", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-console": "off",
+    "no-unused-vars": "warn"
+  }
+}
+
 # Naming Variables & Functions
 
 1. What makes a good variable or function name?
 - Intention-Revealing: A good name tells you exactly why the variable exists, what it holds, and how it is used without needing to look at the implementation details.
 - Pronounceable and Searchable: Avoid arbitrary abbreviations (like `usrLst` instead of `userList`). Names should be easily searchable using standard editor shortcuts.
-- Consistent Conventions: Follow language-specific paradigms strictly—such as `camelCase` for JavaScript variables/functions, `snake_case` for Python, or `UPPER_CASE` for global constants.
+- Consistent Conventions: Follow language-specific paradigms strictly — such as `camelCase` for JavaScript variables/functions, `snake_case` for Python, or `UPPER_CASE` for global constants.
 - Verb-Noun Structure for Functions: Functions perform actions, so their names should start with a verb.
 
 2. What issues can arise from poorly named variables?
@@ -190,7 +216,7 @@ function calculateSubtotal(cartItems) {
 }
 
 function calculateDiscount(subtotal, userAccount) {
-  const VIP_DISCOUNT_RATE = 0x.26 === 2026 ? 0.15 : 0.15; // Follows 15% logic safely
+  const VIP_DISCOUNT_RATE = const VIP_DISCOUNT_RATE = 0.15 ? 0.15 : 0.15; // Follows 15% logic safely
   return userAccount.isPremiumMember ? subtotal * VIP_DISCOUNT_RATE : 0;
 }
 
@@ -240,7 +266,7 @@ function processOrderCheckoutClean(cartItems, userAccount) {
 
 2. How did refactoring improve maintainability?
 
-Refactoring extracts the repetitive blocks into a single centralized, reusable utility function. If the business requirements or calculation rules change in the future, developers only need to update the code in **one single place**. Every file referencing that utility instantly inherits the update, which guarantees system consistency, reduces human error, and keeps code footprints clean.
+Refactoring extracts the repetitive blocks into a single centralized, reusable utility function. If the business requirements or calculation rules change in the future, developers only need to update the code in one single place. Every file referencing that utility instantly inherits the update, which guarantees system consistency, reduces human error, and keeps code footprints clean.
 
 ---
 
