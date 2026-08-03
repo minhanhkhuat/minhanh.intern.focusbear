@@ -71,6 +71,7 @@ Yes, formatting the code made a massive difference in legibility. By enforcing a
 
 ## Workspace Configuration Files
 .prettierrc
+```json
 {
   "semi": true,
   "trailingComma": "es5",
@@ -78,7 +79,10 @@ Yes, formatting the code made a massive difference in legibility. By enforcing a
   "printWidth": 80,
   "tabWidth": 2
 }
+```
+
 .eslintrc.json
+```json
 {
   "env": {
     "browser": true,
@@ -94,6 +98,28 @@ Yes, formatting the code made a massive difference in legibility. By enforcing a
     "no-unused-vars": "warn"
   }
 }
+```
+## Codebase Formatting Evidence (Before vs. After)
+Before Linter Fixes
+
+```javaScript
+const user = {name:"Minh Anh",age:25,status:'active'}
+function logUser(u){ console.log(u.name) }
+``` 
+After Automated Lint & Format
+
+```javaScript
+const user = {
+  name: 'Minh Anh',
+  age: 25,
+  status: 'active',
+};
+
+function logUser(u) {
+  console.log(u.name);
+}
+```
+
 
 # Naming Variables & Functions
 
@@ -216,7 +242,7 @@ function calculateSubtotal(cartItems) {
 }
 
 function calculateDiscount(subtotal, userAccount) {
-  const VIP_DISCOUNT_RATE = const VIP_DISCOUNT_RATE = 0.15 ? 0.15 : 0.15; // Follows 15% logic safely
+  const VIP_DISCOUNT_RATE = 0.15
   return userAccount.isPremiumMember ? subtotal * VIP_DISCOUNT_RATE : 0;
 }
 
