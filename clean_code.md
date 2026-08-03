@@ -29,8 +29,9 @@
 
 ```sql
 SELECT u.id, u.name, o.id as order_id, o.total_amt, o.dt FROM users u LEFT JOIN orders o ON u.id = o.user_id WHERE o.total_amt > 500 AND u.status = 'active' AND o.dt >= '2026-01-01' ORDER BY o.total_amt DESC;
-
+```
 2. Rewrite:
+```sql
 SELECT 
     users.id AS user_id,
     users.name AS user_name,
