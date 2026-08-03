@@ -473,3 +473,50 @@ function updateUserAccountActivation(user, currentStatus) {
   user.isActive = (currentStatus === 'active');
 }
 ```
+
+# Handling Errors & Edge Cases
+
+
+1. What was the issue with the original code?
+- Silent Failures: The function completely ignores bad inputs (like passing `null` users or negative amounts). Instead of raising an error, it silently returns nonsense or crashes downstream with cryptic messages like `Cannot read properties of null`.
+- Deeply Nested Conditions: Code that doesn't handle errors early gets buried inside deep, structural `if-else` blocks as it checks for validity before running the main logic.
+
+2. How does handling errors improve reliability?
+- Fails Fast: By validating inputs instantly using **Guard Clauses** at the very top of a function, you exit early if anything is wrong. This isolates bugs immediately and prevents bad data from corrupting system state down the line.
+- Flattens Code Layout: Removing the nested wrappers makes the main execution path clean, readable, and focused on the actual business rules rather than defensive scaffolding.
+
+
+## Fragile Error Handling Example
+
+Below is a snippet that is highly susceptible to runtime crashes because it fails to validate inputs or account for edge cases safely:
+
+```javascript
+function processUserRefund(user, refundAmount) {
+  // Dangerous: Assumes user is always valid and amount is always a positive number
+  const currentBalance = user.wallet.balance;
+  
+  // Logic runs blindly without validating bounds
+  user.wallet.balance = currentBalance + refundAmount;
+  
+  return `Refunded $${refundAmount} successfully. New balance: $${user.wallet.balance}`;
+}
+```
+Clean Factoring
+```javascript
+function processUserRefundClean(user, refundAmount) {
+  // 1. Guard Clause: Check if user data exists structurally
+  if (!user || !user.wallet) {
+    throw new Error('Processing failed: Invalid user profile or wallet configuration.');
+  }
+
+  // 2. Guard Clause: Enforce logical input constraints
+  if (typeof refundAmount !== 'number' || refundAmount <= 0) {
+    throw new Error('Processing failed: Refund amount must be a positive numeric value.');
+  }
+
+  // 3. Safe, predictable happy path execution
+  user.wallet.balance += refundAmount;
+  
+  return `Refunded $${refundAmount.toFixed(2)} successfully. New balance: $${user.wallet.balance.toFixed(2)}`;
+}
+```
