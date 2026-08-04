@@ -1,4 +1,5 @@
 # Data Manipulation with Pandas
+<img width="843" height="591" alt="Screenshot 2026-08-04 at 22 36 14" src="https://github.com/user-attachments/assets/36307279-87f3-4903-aa1b-939ffcd19ea5" />
 
 ## Reflection 
 1. What are the advantages of using Pandas for data manipulation?
