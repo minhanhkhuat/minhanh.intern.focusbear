@@ -1,5 +1,5 @@
 # Using Jupyter Notebooks for Interactive Analysis
-
+<img width="570" height="607" alt="Screenshot 2026-08-04 at 22 11 12" src="https://github.com/user-attachments/assets/05653751-d9ff-4375-9af3-2085db0b8ca6" />
 ## Reflection 
 1. What are the advantages of using Jupyter Notebooks for data analysis?
 - Interactive Code Execution: Allows running code in discrete cells individually without re-executing the entire script, making data cleaning and iteration significantly faster.
