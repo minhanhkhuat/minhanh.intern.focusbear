@@ -1,4 +1,6 @@
 # Basic Charting & Data Visualization with Matplotlib & Seaborn
+<img width="833" height="622" alt="Screenshot 2026-08-04 at 22 22 01" src="https://github.com/user-attachments/assets/9950a988-24c2-4e79-a544-43f708ab9c41" />
+<img width="827" height="376" alt="Screenshot 2026-08-04 at 22 22 14" src="https://github.com/user-attachments/assets/3a4a62df-9de4-4f50-960c-5a5451db83b4" />
 
 ## Reflection Questions
 
