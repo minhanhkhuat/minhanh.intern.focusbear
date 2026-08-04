@@ -1,4 +1,5 @@
 # Introduction to Python for Data Analytics
+<img width="827" height="229" alt="Screenshot 2026-08-04 at 22 41 21" src="https://github.com/user-attachments/assets/9b78a064-8391-47b8-9f6c-a1e9b697a3c3" />
 
 ## Reflection 
 
