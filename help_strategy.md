@@ -1,4 +1,5 @@
 # When to Use Google, AI Tools, or Ask for Help?
+<img width="844" height="649" alt="Screenshot 2026-08-06 at 18 27 01" src="https://github.com/user-attachments/assets/8f6644d1-99a0-4315-a2d8-0878ec77c6f2" />
 
 1. When do you prefer using AI vs. searching Google?
 - Use AI Tools: When dealing with syntax errors, explaining complex functions line-by-line, refactoring existing code snippets, or generating initial boilerplate code. AI provides instant, tailored answers without browsing multiple tabs.
