@@ -602,3 +602,13 @@ describe('calculatePercentage', () => {
     expect(result).toBe(80);
   });
 });
+
+### ESLint / Prettier Command Output
+```bash
+$ npm run lint
+
+> focus-bear-app@1.0.0 lint
+> eslint . --ext .js,.ts
+
+✔ 0 errors, 0 warnings (12 files checked)
+✨ Code formatting and style checks passed successfully!
