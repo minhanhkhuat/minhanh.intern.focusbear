@@ -586,24 +586,19 @@ module.exports = { calculatePercentage };
 2. The Jest Test Suite
 
 ```javascript
-const { calculatePercentage } = require('./mathUtils');
+// Example: Testing helper functions using AAA pattern (Arrange, Act, Assert)
+const { calculatePercentage } = require('./utils');
 
-describe('calculatePercentage() Unit Test Suite', () => {
-  // Test case 1: Standard happy path execution
-  test('should accurately calculate percentage for standard positive integers', () => {
-    expect(calculatePercentage(25, 100)).toBe(25);
-    expect(calculatePercentage(3, 4)).toBe(75);
-  });
+describe('calculatePercentage', () => {
+  it('should return correct percentage for valid input', () => {
+    // Arrange
+    const completedTasks = 8;
+    const totalTasks = 10;
 
-  // Test case 2: Edge case validation (Division by zero)
-  test('should handle a total of 0 gracefully by returning 0', () => {
-    expect(calculatePercentage(50, 0)).toBe(0);
-  });
+    // Act
+    const result = calculatePercentage(completedTasks, totalTasks);
 
-  // Test case 3: Error path validation (Type check exceptions)
-  test('should throw a clear error message when passed string inputs', () => {
-    expect(() => calculatePercentage('20', 100)).toThrow('Inputs must be numeric values.');
-    expect(() => calculatePercentage(20, null)).toThrow('Inputs must be numeric values.');
+    // Assert
+    expect(result).toBe(80);
   });
 });
-```
